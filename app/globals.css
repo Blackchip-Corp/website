@@ -31,3 +31,9 @@ body {
     text-wrap: balance;
   }
 }
+.smallest {
+  font-size: 12.5px;
+}
+a {
+  text-decoration: underline;
+}
