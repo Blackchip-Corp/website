@@ -4,7 +4,9 @@ import { createClient } from "@/utils/supabase/server";
 
 export default async function Market() {
   const supabase = createClient();
-  const { data: mercado } = await supabase.from("mercado").select();
+  let { data: mercado } = await supabase.from("mercado").select();
+  if (mercado == null)
+    mercado = []
   return (
     <main className="flex flex-col items-center justify-between p-24 min-h-dvh font-mono">
       <div className="z-10 max-w-5xl w-full items-center justify-between text-sm lg:flex">
